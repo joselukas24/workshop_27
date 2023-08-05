@@ -4,10 +4,12 @@ import Authenticate from "./components/Authenticate";
 import { useState } from "react";
 
 function App() {
+  const [token, setToken] = useState(null);
+
   return (
     <>
-      <SignupForm />
-      <Authenticate />
+      <SignupForm setToken={setToken} />
+      <Authenticate token={token} />
     </>
   );
 }
