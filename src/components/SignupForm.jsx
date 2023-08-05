@@ -36,7 +36,9 @@ export default function SignupForm({ setToken }) {
           <input
             type="text"
             value={username}
-            onChange={(event) => setUsername(event.target.value)}
+            onChange={(event) => {
+              setUsername(event.target.value);
+            }}
           />
         </label>
         <br />
