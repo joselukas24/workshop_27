@@ -1,8 +1,14 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import SignupForm from "./components/SignupForm";
+import Authenticate from "./components/Authenticate";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <SignupForm />
+      <Authenticate />
+    </>
+  );
 }
 
 export default App;
