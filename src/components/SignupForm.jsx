@@ -7,6 +7,10 @@ export default function SignupForm({ setToken }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    if (username.length < 8) {
+      setError("Please make sure username is at least 8 characters.");
+      return;
+    }
     try {
       const response = await fetch(
         "https://fsa-jwt-practice.herokuapp.com/signup",
