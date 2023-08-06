@@ -9,6 +9,8 @@ export default function SignupForm({ setToken }) {
     event.preventDefault();
     if (username.length < 8) {
       setError("Please make sure username is at least 8 characters.");
+      setUsername("");
+      setPassword("");
       return;
     }
     try {
